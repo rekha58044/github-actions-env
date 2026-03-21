@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run this step
-        if: github.ref_name == 'main'
+        if: github.actor== 'rekha58044'
         run: echo "this is main branch"
          
