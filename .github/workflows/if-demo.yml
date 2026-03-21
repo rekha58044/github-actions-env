@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run this step
-        if: ${{github.refs == '/refs/heads/main'}}
+        if: github.ref == '/refs/heads/main'
         run: echo "this is main branch"
          
