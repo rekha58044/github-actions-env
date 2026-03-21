@@ -1,4 +1,4 @@
-name: context jobs:
+name: context job
 on: push
 jobs:
   context-job:
