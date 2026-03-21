@@ -1,9 +1,9 @@
 name: build and deploy
 on:
- pull-request:
+ pull_request:
    types:
      - opened
-     - synchronze
+     - synchronize
 jobs:
   build-job:
     runs-on: ubuntu-latest
