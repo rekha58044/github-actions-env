@@ -1,0 +1,12 @@
+name: build and deploy
+on:
+ pull_request:
+   types:
+     - opened
+     - synchronize
+jobs:
+  build-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build step
+        run : echo "building the job"
