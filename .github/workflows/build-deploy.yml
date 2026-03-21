@@ -19,6 +19,6 @@ jobs:
     if: github.event_name == 'push'
     steps:
       - name: deploy step
-        run: echo "deploying the job"
+        run: echo "deploying the job from main"
 
   
