@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: run this step
         if: ${{github.refs == '/refs/heads/main'}}
-        run: this is main branch
+        run: echo "this is main branch"
          
