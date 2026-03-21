@@ -1,0 +1,14 @@
+name: if-demo
+on: 
+  push:
+    branches:
+      - main
+      - develop
+jobs:
+  if-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run this step
+        if: ${{github.refs == '/refs/heads/main'}}
+        run: this is main branch
+         
