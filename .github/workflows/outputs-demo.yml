@@ -1,11 +1,17 @@
 name: output job
 on: push
 jobs:
-  outputs:
+  build:
+    outputs:
+      version: ${{steps.version-id.outputs.version}}  
     runs-on: ubuntu-latest
     steps:
     - name: setting up version
       id: version-id
       run: echo "version=0.0.1" >> $GITHUB_OUTPUT
-    - name: version defined 
-      run: echo the version is ${{ steps.version-id.outputs.version}}
+   deploy:
+     needs: build
+     runs-on: ubuntu-latest
+     steps:
+       - name: the version specifed in buils job
+         run: the version in deploy is ${{needs.build.outputs.version}}
