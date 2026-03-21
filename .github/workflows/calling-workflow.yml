@@ -3,3 +3,5 @@ on: push
 jobs:
   calling-workflow:
     uses: ./.github/workflows/reusable.yml
+    with:
+      name: john
