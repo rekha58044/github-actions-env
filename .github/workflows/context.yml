@@ -1,0 +1,10 @@
+name: context jobs:
+on: push
+jobs:
+  context-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: informtion
+        run: |
+          echo "the workflow is triggered by ${{github.actor}}"
+          echo "the repo name is ${{github.repository}}"
